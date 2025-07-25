@@ -5,6 +5,7 @@ import { Icon } from '@iconify/vue'
 import { computed } from 'vue'
 import BaseIcon from './components/BaseIcon.vue'
 
+
 const route = useRoute()
 
 const isHomePage = computed(() => route.path === '/')
@@ -18,7 +19,7 @@ const isHomePage = computed(() => route.path === '/')
     >
       <div class="navbar-start">
         <RouterLink to="/" class="btn btn-ghost text-xl font-bold text-primary">
-          <BaseIcon source="custom" name="IconMountain" />
+          <BaseIcon source="custom" name="IconMountain"/>
           Point of Vue
         </RouterLink>
       </div>
