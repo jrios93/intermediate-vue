@@ -7,6 +7,8 @@ import BaseModal from './BaseModal.vue'
 
 import type { Task, TaskStatus, TaskArea, Week } from '../types'
 import { onMounted } from 'vue'
+import BaseTextArea from './BaseTextArea.vue'
+import {weeks} from '@/composables/useWeeks'
 
 interface TaskFormData {
   title: string
@@ -70,7 +72,7 @@ const updateTask = async (taskId: string, updates: Partial<Omit<Task, 'id' | 'cr
 }
 
 // Week management logic (simple local state without caching)
-const weeks = ref<Week[]>([])
+
 const weekIsLoading = ref(false)
 const weekError = ref<string | null>(null)
 
@@ -274,19 +276,15 @@ onMounted(async () => {
       </div>
 
       <!-- Description -->
-      <div class="form-control">
-        <label class="label" for="task-description">
-          <span class="label-text font-medium">Description</span>
-        </label>
-        <textarea
+
+        <BaseTextArea
           id="task-description"
+          label="Description"
           v-model="taskForm.description"
-          class="textarea textarea-bordered w-full"
-          rows="3"
           placeholder="Describe your task..."
           :disabled="isLoading"
-        ></textarea>
-      </div>
+        />
+
 
       <!-- Week Selection -->
       <div class="form-control">

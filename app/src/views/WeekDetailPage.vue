@@ -5,7 +5,8 @@ import { Icon } from '@iconify/vue'
 import type { Task, Week, TimeEntry } from '../types'
 import { useTimeEntryStore } from '../stores/timeEntryStore'
 import { useTaskStore } from '../stores/taskStore'
-
+import {weeks} from '@/composables/useWeeks'
+import { formatDateRange } from '@/utils/datetime'
 // Router setup
 const route = useRoute()
 const router = useRouter()
@@ -18,7 +19,6 @@ const taskStore = useTaskStore()
 const API_BASE_URL = 'http://localhost:3000'
 
 // Week management logic
-const weeks = ref<Week[]>([])
 const weekIsLoading = ref(false)
 const weekError = ref<string | null>(null)
 
@@ -246,11 +246,6 @@ const formatTime = (minutes: number) => {
   return `${hours}h ${mins}min`
 }
 
-const formatDateRange = (startDate: string, endDate: string) => {
-  const start = new Date(startDate)
-  const end = new Date(endDate)
-  return `${start.toLocaleDateString()} - ${end.toLocaleDateString()}`
-}
 
 const formatDate = (dateStr: string) => {
   return new Date(dateStr).toLocaleDateString('en-US', {

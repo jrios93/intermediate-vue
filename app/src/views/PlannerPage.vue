@@ -6,6 +6,9 @@ import { useTaskStore } from '@/stores/taskStore'
 import WeekFormModal from '../components/WeekFormModal.vue'
 import DeleteConfirmModal from '../components/DeleteConfirmModal.vue'
 import type { Task, Week } from '../types'
+import NewPlanerCardBody from '@/components/NewPlanerCardBody.vue'
+import {weeks} from '@/composables/useWeeks'
+import { formatDateRange } from '@/utils/datetime'
 
 // Router setup
 const router = useRouter()
@@ -17,7 +20,6 @@ const taskStore = useTaskStore()
 const API_BASE_URL = 'http://localhost:3000'
 
 // Week management logic (simple local state without caching)
-const weeks = ref<Week[]>([])
 const weekIsLoading = ref(false)
 const weekError = ref<string | null>(null)
 
@@ -240,11 +242,7 @@ const getWeekStatus = () => {
 }
 
 // Format date range
-const formatDateRange = (startDate: string, endDate: string) => {
-  const start = new Date(startDate)
-  const end = new Date(endDate)
-  return `${start.toLocaleDateString()} - ${end.toLocaleDateString()}`
-}
+
 </script>
 
 <template>
@@ -570,6 +568,8 @@ const formatDateRange = (startDate: string, endDate: string) => {
               <span>No tasks planned</span>
             </div>
           </div>
+
+          <NewPlanerCardBody :taskList="selectedWeekTasks" :isExpanded="isTaskListExpanded"/>
 
           <div v-if="selectedWeekTasks.length > 0" class="border-t border-base-300 pt-4">
             <div class="space-y-2">

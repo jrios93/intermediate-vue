@@ -5,6 +5,8 @@ import { Icon } from '@iconify/vue'
 import { useTimeEntryStore } from '../stores/timeEntryStore'
 import { useTaskStore } from '../stores/taskStore'
 import type { Task, Week, TimeEntry } from '../types'
+import {weeks} from '@/composables/useWeeks'
+import { formatDateRange } from '@/utils/datetime'
 
 // Use the time entries store
 const timeEntryStore = useTimeEntryStore()
@@ -29,7 +31,6 @@ const getTasksByWeek = (weekId: string): Task[] => {
 }
 
 // Week management logic (simple local state without caching)
-const weeks = ref<Week[]>([])
 const weekIsLoading = ref(false)
 const weekError = ref<string | null>(null)
 
@@ -245,11 +246,7 @@ const formatTime = (minutes: number) => {
 }
 
 // Format date range
-const formatDateRange = (startDate: string, endDate: string) => {
-  const start = new Date(startDate)
-  const end = new Date(endDate)
-  return `${start.toLocaleDateString()} - ${end.toLocaleDateString()}`
-}
+
 </script>
 
 <template>
@@ -269,8 +266,8 @@ const formatDateRange = (startDate: string, endDate: string) => {
             <span class="label-text font-medium">Select Week:</span>
           </label>
           <select
-            id="week-select"
-            v-model="selectedWeekId"
+          id="week-select"
+          v-model="selectedWeekId"
             class="select select-bordered w-full max-w-md"
           >
             <option v-for="week in weeks" :key="week.id" :value="week.id">

@@ -1,24 +1,18 @@
 {
   "weeks": [
     {
-      "id": "2025-W20",
       "startDate": "2025-05-12",
       "endDate": "2025-05-18",
-      "totalPlannedMinutes": 2400,
-      "totalActualMinutes": 2580,
-      "isCurrentWeek": false,
-      "createdAt": "2025-05-12T08:00:00.000Z",
-      "updatedAt": "2025-05-18T20:30:00.000Z"
+      "description": "This is my new goal",
+      "updatedAt": "2025-07-25T22:02:20.621Z",
+      "id": "2025-W20"
     },
     {
-      "id": "2025-W21",
       "startDate": "2025-05-19",
       "endDate": "2025-05-25",
-      "totalPlannedMinutes": 2700,
-      "totalActualMinutes": 1950,
-      "isCurrentWeek": true,
-      "createdAt": "2025-05-19T08:00:00.000Z",
-      "updatedAt": "2025-05-27T14:15:00.000Z"
+      "description": "This is my new goal!",
+      "updatedAt": "2025-07-25T19:17:33.369Z",
+      "id": "2025-W21"
     },
     {
       "id": "2025-W22",
@@ -61,7 +55,7 @@
       "id": "task-2",
       "weekId": "2025-W20",
       "title": "Plan Weekend Hiking Trip",
-      "description": "Research trails, book accommodations, prepare gear list",
+      "description": "Research trails, book accommodations, prepare gear list, description add for new features",
       "areas": [
         "personal",
         "health"
@@ -70,7 +64,7 @@
       "actualMinutes": 185,
       "status": "completed",
       "createdAt": "2025-05-13T10:30:00.000Z",
-      "updatedAt": "2025-05-16T19:20:00.000Z"
+      "updatedAt": "2025-07-25T18:50:53.310Z"
     },
     {
       "id": "task-3",
@@ -322,6 +316,15 @@
       "isManual": true,
       "notes": "Research took longer than expected due to booking complications",
       "createdAt": "2025-05-14T22:05:00.000Z"
+    },
+    {
+      "taskId": "task-1",
+      "startTime": "2025-07-26T00:13:00.000Z",
+      "minutes": 30,
+      "isManual": true,
+      "notes": "This is time I spent on this component",
+      "id": "entry-1753470867057",
+      "createdAt": "2025-07-25T19:14:27.057Z"
     }
   ]
 }
