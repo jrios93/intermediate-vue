@@ -5,7 +5,7 @@ import { Icon } from '@iconify/vue'
 import { useTaskStore } from '@/stores/taskStore'
 import BaseModal from './BaseModal.vue'
 
-import type { Task, TaskStatus, TaskArea, Week } from '../types'
+import type { Task, TaskStatus, TaskArea, Week } from '@/types'
 import { onMounted } from 'vue'
 import BaseTextarea from './BaseTextarea.vue'
 
@@ -19,7 +19,10 @@ interface TaskFormData {
 }
 
 const props = defineProps({
-  task: Object as PropType<Task> | undefined,
+  task: {
+    type: Object as PropType<Task>,
+    default: undefined,
+  },
 })
 
 // Use centralized task store
@@ -74,6 +77,9 @@ const updateTask = async (taskId: string, updates: Partial<Omit<Task, 'id' | 'cr
 
 const weekIsLoading = ref(false)
 const weekError = ref<string | null>(null)
+
+// Weeks state
+const weeks = ref<Week[]>([])
 
 // Computed properties
 const currentWeek = computed(() => {

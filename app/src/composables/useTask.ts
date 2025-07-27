@@ -12,25 +12,37 @@ export function filterTasks(
   // Always forces a reactive value
   const reactiveTasks = ref(taskList)
 
-  return taskList.filter((task) => {
+  const unwrappedFilters = toValue(filters)
+  return tasks.filter((task) => {
     // Week filter
-    if (filters.weekId && filters.weekId !== 'all' && task.weekId !== filters.weekId) {
+    if (
+      unwrappedFilters.weekId &&
+      unwrappedFilters.weekId !== 'all' &&
+      task.weekId !== unwrappedFilters.weekId
+    ) {
       return false
     }
-
     // Status filter
-    if (filters.status && filters.status !== 'all' && task.status !== filters.status) {
+    if (
+      unwrappedFilters.status &&
+      unwrappedFilters.status !== 'all' &&
+      task.status !== unwrappedFilters.status
+    ) {
       return false
     }
 
     // Area filter
-    if (filters.area && filters.area !== 'all' && !task.areas.includes(filters.area)) {
+    if (
+      unwrappedFilters.area &&
+      unwrappedFilters.area !== 'all' &&
+      !task.areas.includes(unwrappedFilters.area)
+    ) {
       return false
     }
 
     // Search term filter
-    if (filters.searchTerm) {
-      const searchLower = filters.searchTerm.toLowerCase()
+    if (unwrappedFilters.searchTerm) {
+      const searchLower = unwrappedFilters.searchTerm.toLowerCase()
       const matchesTitle = task.title.toLowerCase().includes(searchLower)
       const matchesDescription = task.description?.toLowerCase().includes(searchLower)
       if (!matchesTitle && !matchesDescription) {

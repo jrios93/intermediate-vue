@@ -174,7 +174,7 @@ const newTaskStore = ref<Task[]>([])
 
 // Filter tasks using inline method
 const filteredTasks = computed(() => {
-  return filterTasks(newTaskStore, {
+  return filterTasks(taskStore.tasks, {
     weekId: selectedWeek.value === 'all' ? undefined : selectedWeek.value,
     status: selectedStatus.value as TaskStatus | 'all',
     area: selectedArea.value as TaskArea | 'all',
@@ -271,7 +271,7 @@ const toggleTimeEntries = (taskId: string) => {
     </div>
 
     <!-- Task Form Modal Component -->
-    <TaskFormModal ref="taskFormModalRef" :task="currentEditingTask" />
+    <TaskFormModal ref="taskFormModalRef" :task="currentEditingTask ?? undefined" />
 
     <!-- Delete Confirmation Modal -->
     <DeleteConfirmModal
