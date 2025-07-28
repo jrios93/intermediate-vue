@@ -44,10 +44,7 @@
       "weekId": "2025-W20",
       "title": "Review Vue 3 Documentation",
       "description": "Deep dive into Composition API and new features this is my new update",
-      "areas": [
-        "learning",
-        "work"
-      ],
+      "areas": ["learning", "work"],
       "estimatedMinutes": 240,
       "actualMinutes": 275,
       "status": "completed",
@@ -59,10 +56,7 @@
       "weekId": "2025-W20",
       "title": "Plan Weekend Hiking Trip",
       "description": "Research trails, book accommodations, prepare gear list",
-      "areas": [
-        "personal",
-        "health"
-      ],
+      "areas": ["personal", "health"],
       "estimatedMinutes": 120,
       "actualMinutes": 185,
       "status": "completed",
@@ -74,10 +68,7 @@
       "weekId": "2025-W20",
       "title": "Client Project: Dashboard Redesign",
       "description": "Update user interface based on feedback from stakeholders",
-      "areas": [
-        "work",
-        "creative"
-      ],
+      "areas": ["work", "creative"],
       "estimatedMinutes": 480,
       "actualMinutes": 520,
       "status": "completed",
@@ -89,10 +80,7 @@
       "weekId": "2025-W20",
       "title": "Coffee Chat with Sarah",
       "description": "Catch up and discuss potential collaboration opportunities",
-      "areas": [
-        "social",
-        "work"
-      ],
+      "areas": ["social", "work"],
       "estimatedMinutes": 60,
       "actualMinutes": 90,
       "status": "completed",
@@ -104,10 +92,7 @@
       "weekId": "2025-W20",
       "title": "Weekly Meal Prep",
       "description": "Plan and prepare healthy meals for the upcoming week",
-      "areas": [
-        "personal",
-        "health"
-      ],
+      "areas": ["personal", "health"],
       "estimatedMinutes": 180,
       "actualMinutes": 155,
       "status": "completed",
@@ -119,10 +104,7 @@
       "weekId": "2025-W21",
       "title": "Prepare Workshop Materials",
       "description": "Create slides, examples, and hands-on exercises for Vue workshop",
-      "areas": [
-        "work",
-        "learning"
-      ],
+      "areas": ["work", "learning"],
       "estimatedMinutes": 360,
       "actualMinutes": 280,
       "status": "completed",
@@ -134,11 +116,7 @@
       "weekId": "2025-W21",
       "title": "Update Personal Portfolio",
       "description": "Add recent projects and refresh design",
-      "areas": [
-        "personal",
-        "creative",
-        "work"
-      ],
+      "areas": ["personal", "creative", "work"],
       "estimatedMinutes": 300,
       "actualMinutes": 220,
       "status": "in_progress",
@@ -150,10 +128,7 @@
       "weekId": "2025-W21",
       "title": "Team Retrospective Meeting",
       "description": "Facilitate team discussion on last sprint and plan improvements",
-      "areas": [
-        "work",
-        "social"
-      ],
+      "areas": ["work", "social"],
       "estimatedMinutes": 90,
       "actualMinutes": 95,
       "status": "completed",
@@ -165,9 +140,7 @@
       "weekId": "2025-W21",
       "title": "Read 'Clean Code' Chapter 5",
       "description": "Continue reading and take notes on formatting principles",
-      "areas": [
-        "learning"
-      ],
+      "areas": ["learning"],
       "estimatedMinutes": 120,
       "actualMinutes": 0,
       "status": "not_started",
@@ -179,10 +152,7 @@
       "weekId": "2025-W21",
       "title": "Gym Workout Sessions",
       "description": "Three strength training sessions focusing on upper body",
-      "areas": [
-        "health",
-        "personal"
-      ],
+      "areas": ["health", "personal"],
       "estimatedMinutes": 270,
       "actualMinutes": 255,
       "status": "completed",
@@ -194,9 +164,7 @@
       "weekId": "2025-W22",
       "title": "API Integration Testing",
       "description": "Test new payment gateway integration across different scenarios",
-      "areas": [
-        "work"
-      ],
+      "areas": ["work"],
       "estimatedMinutes": 240,
       "actualMinutes": 0,
       "status": "not_started",
@@ -208,10 +176,7 @@
       "weekId": "2025-W22",
       "title": "Family Dinner Planning",
       "description": "Organize monthly family get-together, coordinate with everyone",
-      "areas": [
-        "social",
-        "personal"
-      ],
+      "areas": ["social", "personal"],
       "estimatedMinutes": 90,
       "actualMinutes": 0,
       "status": "not_started",
